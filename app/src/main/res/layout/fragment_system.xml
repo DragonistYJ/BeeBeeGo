@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    tools:context=".fragment.SystemFragment">
+
+
+    <TextView
+        android:id="@+id/system_text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="产品建议"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/system_edit_context"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#fff"
+        android:gravity="top|left"
+        android:hint="请留下您宝贵的意见"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/system_text_1" />
+
+    <TextView
+        android:id="@+id/system_text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="联系方式"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/system_edit_context" />
+
+    <EditText
+        android:id="@+id/system_edit_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="top|left"
+        android:hint="选填:请留下您的邮箱/手机/QQ"
+        android:inputType="text"
+        android:lines="1"
+        android:padding="8dp"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/system_text_2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:text="提   交"
+        app:layout_constraintTop_toBottomOf="@id/system_edit_contact" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    tools:context=".activity.MineActivity">
+
+    <ImageView
+        android:id="@+id/mine_img_bg_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_main_gradient"
+        app:layout_constraintHeight_percent="0.28"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mine_text_telephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:scrollbarSize="16sp"
+        android:text="请登录"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/mine_img_portrait"
+        app:layout_constraintLeft_toRightOf="@id/mine_img_portrait"
+        app:layout_constraintTop_toTopOf="@id/mine_img_portrait" />
+
+    <ImageView
+        android:id="@+id/mine_img_portrait"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/default_portrait"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/mine_btn_log_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/bg_green_20"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:text="登录/注册"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/mine_img_portrait"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mine_img_portrait" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mine_constraint_account"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_white_10_t"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/mine_constraint_record"
+        app:layout_constraintTop_toBottomOf="@id/mine_img_portrait"
+        app:layout_constraintWidth_percent="0.24">
+
+        <ImageView
+            android:id="@+id/mine_img_account"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:tint="#fff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.36"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintWidth_percent="0.46"
+            app:srcCompat="@drawable/ic_account" />
+
+        <TextView
+            android:id="@+id/mine_text_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账号管理"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mine_img_account" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mine_constraint_record"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/bg_white_10"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintLeft_toRightOf="@id/mine_constraint_account"
+        app:layout_constraintRight_toLeftOf="@id/mine_constraint_system"
+        app:layout_constraintTop_toTopOf="@id/mine_constraint_account"
+        app:layout_constraintWidth_percent="0.24">
+
+        <ImageView
+            android:id="@+id/mine_img_record"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:tint="#1FC756"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.36"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintWidth_percent="0.46"
+            app:srcCompat="@drawable/ic_record" />
+
+        <TextView
+            android:id="@+id/mine_text_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出行记录"
+            android:textColor="#1FC756"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mine_img_record" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mine_constraint_system"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/bg_white_10_t"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintLeft_toRightOf="@id/mine_constraint_record"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mine_constraint_account"
+        app:layout_constraintWidth_percent="0.24">
+
+        <ImageView
+            android:id="@+id/mine_img_system"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:tint="#fff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.36"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.32"
+            app:layout_constraintWidth_percent="0.46"
+            app:srcCompat="@drawable/ic_recommand" />
+
+        <TextView
+            android:id="@+id/mine_text_system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="系统"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mine_img_system" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/mine_img_bg_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_white_10_t"
+        app:layout_constraintBottom_toBottomOf="@id/mine_img_bg_1"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mine_img_bg_1"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mine_constraint_record_"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_white_10"
+        app:layout_constraintBottom_toBottomOf="@id/mine_img_bg_2"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mine_img_bg_2"
+        app:layout_constraintWidth_percent="0.8">
+
+        <LinearLayout
+            android:id="@+id/mine_linear_record_collection"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/mine_linear_record_going"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_green_10"
+                android:padding="6dp"
+                android:src="@drawable/ic_collection"
+                android:tint="#1FC756" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="我的收藏"
+                android:textColor="#1FC756"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mine_linear_record_going"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/mine_linear_record_collection"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_white_10"
+                android:padding="6dp"
+                android:src="@drawable/ic_going"
+                android:tint="#bfbfbf" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="待出行"
+                android:textColor="#bfbfbf"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mine_constraint_account_"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_white_10"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/mine_img_bg_2"
+        app:layout_constraintHeight_percent="0.13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mine_img_bg_2"
+        app:layout_constraintWidth_percent="0.8">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="1dp"
+                android:background="#0f000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="您的默认出行需求权重为"
+                android:textColor="#888"
+                android:textSize="10sp" />
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="1dp"
+                android:background="#0f000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mine_linear_account_cost"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/mine_linear_account_time"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_white_10"
+                android:padding="8dp"
+                android:src="@drawable/ic_cost" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="花费:33%"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mine_linear_account_time"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/mine_linear_account_cost"
+            app:layout_constraintRight_toLeftOf="@id/mine_linear_account_comfort"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_white_10"
+                android:padding="8dp"
+                android:src="@drawable/ic_time"
+                android:tint="#000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="时间:33%"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mine_linear_account_comfort"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/mine_linear_account_time"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_white_10"
+                android:padding="8dp"
+                android:src="@drawable/ic_comfort" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="舒适度:34%"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mine_constraint_system_"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_white_10"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/mine_img_bg_2"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mine_img_bg_2"
+        app:layout_constraintWidth_percent="0.8">
+
+        <LinearLayout
+            android:id="@+id/mine_linear_system_edition"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/mine_linear_system_new"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_white_10"
+                android:padding="8dp"
+                android:src="@drawable/ic_edition" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="当前版本 1.0.0"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mine_linear_system_new"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/mine_linear_system_edition"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_white_10"
+                android:padding="8dp"
+                android:src="@drawable/ic_new" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="最新版 1.0.0"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mine_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mine_img_bg_2" />
+
+</android.support.constraint.ConstraintLayout>

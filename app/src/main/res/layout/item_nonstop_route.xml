@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_10"
+    android:paddingTop="20dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/item_nonstop_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:text="起"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/item_nonstop_money"
+        app:layout_constraintRight_toRightOf="@id/item_nonstop_line2" />
+
+    <TextView
+        android:id="@+id/item_nonstop_money"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:text="dfsdf"
+        android:textColor="#fb6e52"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/item_nonstop_line2"
+        app:layout_constraintRight_toLeftOf="@id/item_nonstop_up"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="￥"
+        android:textColor="#fb6e52"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/item_nonstop_money"
+        app:layout_constraintRight_toLeftOf="@id/item_nonstop_money" />
+
+    <TextView
+        android:id="@+id/item_nonstop_depart_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:gravity="right"
+        android:text="06:26"
+        android:textColor="#1FC756"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/item_nonstop_line1"
+        app:layout_constraintRight_toLeftOf="@id/item_nonstop_line1"
+        app:layout_constraintWidth_percent="0.18" />
+
+    <TextView
+        android:id="@+id/item_nonstop_depart_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="成都东"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/item_nonstop_depart_time"
+        app:layout_constraintRight_toRightOf="@id/item_nonstop_depart_time"
+        app:layout_constraintTop_toBottomOf="@id/item_nonstop_line1" />
+
+    <TextView
+        android:id="@+id/item_nonstop_arrive_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:gravity="left"
+        android:text="12:33"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/item_nonstop_line1"
+        app:layout_constraintLeft_toRightOf="@id/item_nonstop_line1"
+        app:layout_constraintWidth_percent="0.18" />
+
+    <TextView
+        android:id="@+id/item_nonstop_arrive_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="沈阳西"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/item_nonstop_arrive_time"
+        app:layout_constraintRight_toRightOf="@id/item_nonstop_arrive_time"
+        app:layout_constraintTop_toBottomOf="@id/item_nonstop_line1" />
+
+    <TextView
+        android:id="@+id/item_nonstop_train_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="G104"
+        android:textColor="#444444"
+        app:layout_constraintBottom_toTopOf="@id/item_nonstop_line1"
+        app:layout_constraintLeft_toLeftOf="@id/item_nonstop_line1"
+        app:layout_constraintRight_toRightOf="@id/item_nonstop_line1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/item_nonstop_line1"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="#0F000000"
+        app:layout_constraintBottom_toTopOf="@id/item_nonstop_time_cost"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_nonstop_train_number"
+        app:layout_constraintWidth_percent="0.24" />
+
+    <View
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/item_route_brief_round"
+        app:layout_constraintBottom_toBottomOf="@id/item_nonstop_line1"
+        app:layout_constraintRight_toLeftOf="@id/item_nonstop_line1"
+        app:layout_constraintTop_toTopOf="@id/item_nonstop_line1" />
+
+    <View
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/item_route_brief_round"
+        app:layout_constraintBottom_toBottomOf="@id/item_nonstop_line1"
+        app:layout_constraintLeft_toRightOf="@id/item_nonstop_line1"
+        app:layout_constraintTop_toTopOf="@id/item_nonstop_line1" />
+
+    <TextView
+        android:id="@+id/item_nonstop_time_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5时55分"
+        android:textColor="#444444"
+        app:layout_constraintBottom_toTopOf="@id/item_nonstop_line2"
+        app:layout_constraintLeft_toLeftOf="@id/item_nonstop_line1"
+        app:layout_constraintRight_toRightOf="@id/item_nonstop_line1"
+        app:layout_constraintTop_toBottomOf="@id/item_nonstop_line1" />
+
+    <View
+        android:id="@+id/item_nonstop_line2"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/line_dash_gray_2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_nonstop_time_cost"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@id/item_nonstop_line2"
+        app:layout_constraintRight_toRightOf="@id/item_nonstop_line2"
+        app:layout_constraintTop_toBottomOf="@id/item_nonstop_line2">
+
+        <TextView
+            android:id="@+id/item_nonstop_second_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="二等座（有票）"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_nonstop_first_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="一等座（有票）"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_nonstop_route_business_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="商务座 5"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

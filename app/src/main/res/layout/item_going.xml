@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_going_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_bee_location"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#FAAF40"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/item_going_img"
+        app:layout_constraintRight_toRightOf="@id/item_going_img"
+        app:layout_constraintTop_toBottomOf="@id/item_going_img" />
+
+    <TextView
+        android:id="@+id/item_going_text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="6月18日 19:20-17:35"
+        android:textColor="#FAAF40"
+        app:layout_constraintBottom_toBottomOf="@id/item_going_img"
+        app:layout_constraintLeft_toRightOf="@id/item_going_img"
+        app:layout_constraintTop_toTopOf="@id/item_going_img" />
+
+    <TextView
+        android:id="@+id/item_going_text_dayDifferent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        android:textColor="#FAAF40"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/item_going_text_time"
+        app:layout_constraintLeft_toRightOf="@id/item_going_text_time" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_white_topleft_bottomright_30"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/item_going_text_time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_going_img">
+
+        <TextView
+            android:id="@+id/item_going_text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="四川大学-沈阳软件园"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_going_text_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="￥1005.2"
+            android:textColor="#666"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/item_going_text_changeTime"
+            app:layout_constraintTop_toBottomOf="@id/item_going_text_changeTime" />
+
+        <TextView
+            android:id="@+id/item_going_text_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="起"
+            android:textColor="#666"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/item_going_text_money"
+            app:layout_constraintLeft_toRightOf="@id/item_going_text_money" />
+
+        <TextView
+            android:id="@+id/item_going_text_changeTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="城际间转乘2次"
+            android:textColor="#666"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/item_going_text_title"
+            app:layout_constraintTop_toBottomOf="@id/item_going_text_title" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="#0f000000"
+            app:layout_constraintBottom_toBottomOf="@id/item_going_text_changeTime"
+            app:layout_constraintLeft_toRightOf="@id/item_going_text_changeTime"
+            app:layout_constraintRight_toLeftOf="@id/item_going_text_comfort"
+            app:layout_constraintTop_toTopOf="@id/item_going_text_changeTime" />
+
+        <TextView
+            android:id="@+id/item_going_text_comfort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="舒适度为90.5分"
+            android:textColor="#666"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toRightOf="@id/item_going_text_changeTime"
+            app:layout_constraintTop_toTopOf="@id/item_going_text_changeTime" />
+
+        <TextView
+            android:id="@+id/item_going_text_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_green_4"
+            android:paddingLeft="8dp"
+            android:paddingTop="4dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="4dp"
+            android:text="取消行程"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_going_text_money" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

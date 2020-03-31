@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ResultActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/result_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_linear_method" />
+
+    <LinearLayout
+        android:id="@+id/result_linear_choice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result_linear_method"
+        app:layout_constraintWidth_percent="0.33">
+
+        <TextView
+            android:id="@+id/result_text_train"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_gray_20"
+            android:gravity="center"
+            android:text="火车" />
+
+        <TextView
+            android:id="@+id/result_text_flight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:height="40dp"
+            android:background="@drawable/bg_gray_20"
+            android:gravity="center"
+            android:text="机票" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_main_gradient"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/result_linear_method"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/result_linear_method"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:gravity="bottom"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintTop_toBottomOf="@id/result_linear_date">
+
+        <TextView
+            android:id="@+id/result_text_method_custom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=" 自定义 "
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/result_text_method_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_gray_10_topleft_topright"
+            android:gravity="center"
+            android:text="蜂行推荐"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/result_text_method_nonstop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=" 仅直达 "
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/result_constraint_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="#4f000000"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_linear_date">
+
+        <com.haibin.calendarview.CalendarView
+            android:id="@+id/result_calendar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#fff"
+            app:current_month_lunar_text_color="#cfcfcf"
+            app:current_month_text_color="#333333"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.64"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintWidth_percent="1"
+            app:max_year="2500"
+            app:min_year="1960"
+            app:month_view="love.dragonist.beebeego.view.MyMonthView"
+            app:other_month_lunar_text_color="#e1e1e1"
+            app:other_month_text_color="#e1e1e1"
+            app:scheme_text="假"
+            app:scheme_text_color="#333333"
+            app:scheme_theme_color="#108cd4"
+            app:selected_lunar_text_color="#666666"
+            app:selected_text_color="#333333"
+            app:selected_theme_color="#1FC756"
+            app:week_background="#ffffff"
+            app:week_text_color="#111111"
+            app:week_view="love.dragonist.beebeego.view.MyWeekView"
+            app:year_view_day_text_color="#333333"
+            app:year_view_day_text_size="8sp"
+            app:year_view_month_text_color="#ff0000"
+            app:year_view_month_text_size="20sp"
+            app:year_view_scheme_color="#f17706" />
+
+        <TextView
+            android:id="@+id/result_calendar_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="6"
+            android:textColor="#0f000000"
+            android:textSize="200sp"
+            app:layout_constraintBottom_toBottomOf="@id/result_calendar"
+            app:layout_constraintLeft_toLeftOf="@id/result_calendar"
+            app:layout_constraintRight_toRightOf="@id/result_calendar"
+            app:layout_constraintTop_toTopOf="@id/result_calendar" />
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/result_linear_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/result_img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:tint="#fff"
+            app:srcCompat="@drawable/ic_left_arrow" />
+
+        <TextView
+            android:id="@+id/result_text_depart_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="四川大学"
+            android:textColor="#fff" />
+
+        <ImageView
+            android:id="@+id/result_img_change_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="#fff"
+            app:srcCompat="@drawable/ic_double_arrow" />
+
+        <TextView
+            android:id="@+id/result_text_arrive_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="四川大学"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/result_linear_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/result_linear_title">
+
+        <TextView
+            android:id="@+id/result_text_date_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingLeft="16dp"
+            android:text="前一天"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/result_linear_date_"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_calendar"
+                android:tint="#fff" />
+
+            <TextView
+                android:id="@+id/result_text_month_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:text="7月6日"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/result_text_weekday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="星期五"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_rectangle_down"
+                android:tint="#fff" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/result_text_date_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingRight="16dp"
+            android:text="后一天"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

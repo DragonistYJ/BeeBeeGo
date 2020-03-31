@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/insidecity_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/bg_green_20"
+        android:gravity="center_horizontal"
+        android:padding="4dp"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/insidecity_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:tint="#fff"
+        app:layout_constraintBottom_toBottomOf="@id/insidecity_title"
+        app:layout_constraintRight_toRightOf="@id/insidecity_title"
+        app:layout_constraintTop_toTopOf="@id/insidecity_title"
+        app:srcCompat="@drawable/ic_arrow_up" />
+
+    <TextView
+        android:id="@+id/insidecity_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/insidecity_distance"
+        app:layout_constraintTop_toBottomOf="@id/insidecity_title" />
+
+    <TextView
+        android:id="@+id/insidecity_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/insidecity_time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/insidecity_title" />
+
+    <LinearLayout
+        android:id="@+id/insidecity_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insidecity_time" />
+
+    <Button
+        android:id="@+id/insidecity_btn_change"
+        android:layout_width="72dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_green_20"
+        android:text="换一条"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/insidecity_linear" />
+</android.support.constraint.ConstraintLayout>

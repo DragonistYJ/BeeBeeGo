@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/brief_constraint_whole"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BriefResultActivity">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/brief_mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.84"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <View
+        android:id="@+id/brief_view_3"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#efefef"
+        app:layout_constraintTop_toBottomOf="@id/brief_constraint_1" />
+
+    <ScrollView
+        android:id="@+id/guide_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#fff"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/brief_linear_collection"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brief_view_3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="none">
+
+            <love.dragonist.beebeego.view.InsideCityView
+                android:id="@+id/brief_insidecity_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <love.dragonist.beebeego.view.InterCityView
+                android:id="@+id/brief_intercity_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <love.dragonist.beebeego.view.InsideCityView
+                android:id="@+id/brief_insidecity_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <love.dragonist.beebeego.view.InterCityView
+                android:id="@+id/brief_intercity_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <love.dragonist.beebeego.view.InsideCityView
+                android:id="@+id/brief_insidecity_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <love.dragonist.beebeego.view.InterCityView
+                android:id="@+id/brief_intercity_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <love.dragonist.beebeego.view.InsideCityView
+                android:id="@+id/brief_insidecity_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/brief_linear_collection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#444854"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/brief_linear_going"
+        app:layout_constraintTop_toBottomOf="@id/guide_scroll">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_bee_collection" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏点赞"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/brief_linear_going"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#444854"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/brief_linear_collection"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/brief_linear_collection">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_bee_going" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加入待出行"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/brief_constraint_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#fff"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1">
+
+        <View
+            android:id="@+id/brief_view_1"
+            android:layout_width="0dp"
+            android:layout_height="6dp"
+            android:background="@drawable/bg_gray_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <View
+            android:id="@+id/brief_view_2"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:background="#000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/brief_view_1" />
+
+        <TextView
+            android:id="@+id/brief_text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="13时25分"
+            app:layout_constraintBottom_toTopOf="@id/brief_text_money"
+            app:layout_constraintRight_toLeftOf="@id/brief_view_2"
+            app:layout_constraintTop_toTopOf="@id/brief_view_2" />
+
+        <TextView
+            android:id="@+id/brief_text_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥1005起"
+            app:layout_constraintBottom_toTopOf="@id/brief_text_changeTimes"
+            app:layout_constraintRight_toRightOf="@id/brief_text_time"
+            app:layout_constraintTop_toBottomOf="@id/brief_text_time" />
+
+        <TextView
+            android:id="@+id/brief_text_changeTimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="换乘1次"
+            app:layout_constraintBottom_toBottomOf="@id/brief_view_2"
+            app:layout_constraintRight_toRightOf="@+id/brief_text_time"
+            app:layout_constraintTop_toBottomOf="@id/brief_text_money" />
+
+        <LinearLayout
+            android:id="@+id/brief_linear_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/brief_text_time"
+            app:layout_constraintLeft_toRightOf="@+id/brief_view_2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/brief_text_time">
+
+            <TextView
+                android:id="@+id/brief_text_start_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="2dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="2dp"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="16dp"
+                android:layout_weight="2"
+                app:srcCompat="@drawable/ic_right_triangle" />
+
+            <TextView
+                android:id="@+id/brief_text_end_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="2dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="2dp"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/brief_linear_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/brief_text_money"
+            app:layout_constraintLeft_toRightOf="@+id/brief_view_2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/brief_text_money">
+
+            <TextView
+                android:id="@+id/brief_text_start_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="2dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="2dp"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="16dp"
+                android:layout_weight="2"
+                app:srcCompat="@drawable/ic_right_triangle" />
+
+            <TextView
+                android:id="@+id/brief_text_end_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="2dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="2dp"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/brief_linear_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/brief_text_changeTimes"
+            app:layout_constraintLeft_toRightOf="@id/brief_view_2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/brief_text_changeTimes">
+
+            <TextView
+                android:id="@+id/brief_text_start_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="2dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="2dp"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="16sp"
+                android:layout_weight="2"
+                app:srcCompat="@drawable/ic_right_triangle" />
+
+            <TextView
+                android:id="@+id/brief_text_end_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="2dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="2dp"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

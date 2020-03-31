@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.RecommendFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/recommend_linear_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/recommend_scroll"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/recommend_text_zero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingTop="4dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="4dp"
+            android:text=" 直达 "
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/recommend_text_one"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/recommend_text_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_yellow_24"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingTop="4dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="4dp"
+            android:text="转乘1次"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/recommend_text_zero"
+            app:layout_constraintRight_toLeftOf="@id/recommend_text_two"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/recommend_text_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_yellow_24"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingTop="4dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="4dp"
+            android:text="转乘2次"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/recommend_text_one"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/recommend_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/recommend_linear_2"
+        app:layout_constraintTop_toBottomOf="@id/recommend_linear_1">
+
+        <ListView
+            android:id="@+id/recommend_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#fafafa"
+            android:dividerHeight="12dp"
+            android:scrollbars="none" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/recommend_linear_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintTop_toBottomOf="@id/recommend_scroll"
+        app:layout_constraintVertical_bias="1">
+
+        <TextView
+            android:id="@+id/recommend_text_comprehensive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#444854"
+            android:gravity="center"
+            android:text="综合最优"
+            android:textColor="#1FC756" />
+
+        <TextView
+            android:id="@+id/recommend_text_price"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#444854"
+            android:gravity="center"
+            android:text="花费最优"
+            android:textColor="#FFF" />
+
+        <TextView
+            android:id="@+id/recommend_text_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#444854"
+            android:gravity="center"
+            android:text="耗时最优"
+            android:textColor="#FFF" />
+
+        <TextView
+            android:id="@+id/recommend_text_comfort"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#444854"
+            android:gravity="center"
+            android:text="舒适度最优"
+            android:textColor="#FFF" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/recommend_img_load_bee"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintWidth_percent="0.24"
+        app:srcCompat="@drawable/ic_bee" />
+
+    <ImageView
+        android:id="@+id/recommend_img_loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/recommend_img_load_bee"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintLeft_toLeftOf="@id/recommend_img_load_bee"
+        app:layout_constraintRight_toRightOf="@id/recommend_img_load_bee"
+        app:layout_constraintTop_toTopOf="@id/recommend_img_load_bee"
+        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintWidth_percent="0.1"
+        app:srcCompat="@drawable/ic_loading" />
+</android.support.constraint.ConstraintLayout>

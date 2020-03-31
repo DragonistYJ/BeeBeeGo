@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LogRegActivity">
+
+    <ImageView
+        android:id="@+id/logreg_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/logreg_bg"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/logreg_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:tint="#fff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_left_arrow" />
+
+    <TextView
+        android:id="@+id/logreg_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="欢迎来到蜂行"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/logreg_line1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="30dp"
+        android:background="#585a63"
+        app:layout_constraintLeft_toLeftOf="@id/logreg_welcome"
+        app:layout_constraintRight_toRightOf="@id/logreg_welcome"
+        app:layout_constraintTop_toBottomOf="@id/logreg_welcome" />
+
+    <ImageView
+        android:id="@+id/logreg_locate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@mipmap/logreg_locate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.26"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logreg_line1"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <EditText
+        android:id="@+id/logreg_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#92949a"
+        android:drawableLeft="@drawable/ic_phone"
+        android:drawablePadding="16dp"
+        android:drawableTint="#fff"
+        android:hint="输入手机号"
+        android:lines="1"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logreg_locate"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <EditText
+        android:id="@+id/logreg_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#92949a"
+        android:drawableLeft="@drawable/ic_password"
+        android:drawablePadding="16dp"
+        android:drawableTint="#fff"
+        android:hint="请输入密码"
+        android:lines="1"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logreg_phone"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <EditText
+        android:id="@+id/logreg_code1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#92949a"
+        android:drawableLeft="@drawable/ic_safe"
+        android:drawablePadding="16dp"
+        android:drawableTint="#fff"
+        android:hint="输入验证码"
+        android:lines="1"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logreg_phone"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <Button
+        android:id="@+id/logreg_send_code1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/bg_green_20"
+        android:text="获取验证码"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/logreg_code1"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintRight_toRightOf="@id/logreg_code1"
+        app:layout_constraintTop_toTopOf="@id/logreg_code1" />
+
+    <TextView
+        android:id="@+id/logreg_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="验证码登录"
+        android:textColor="#fff"
+        app:layout_constraintRight_toRightOf="@id/logreg_password"
+        app:layout_constraintTop_toBottomOf="@id/logreg_password" />
+
+    <EditText
+        android:id="@+id/logreg_code2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#92949a"
+        android:drawableLeft="@drawable/ic_safe"
+        android:drawablePadding="16dp"
+        android:drawableTint="#fff"
+        android:hint="输入验证码"
+        android:lines="1"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logreg_password"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <Button
+        android:id="@+id/logreg_send_code2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/bg_green_20"
+        android:text="获取验证码"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/logreg_code2"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintRight_toRightOf="@id/logreg_code2"
+        app:layout_constraintTop_toTopOf="@id/logreg_code2" />
+
+
+    <Button
+        android:id="@+id/logreg_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/bg_green_4"
+        android:text="登        录"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/logreg_forget"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.7" />
+
+
+    <TextView
+        android:id="@+id/logreg_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="忘记密码"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/logreg_phone" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="#fff"
+        app:layout_constraintLeft_toLeftOf="@id/logreg_forget"
+        app:layout_constraintRight_toRightOf="@id/logreg_forget"
+        app:layout_constraintTop_toBottomOf="@id/logreg_forget" />
+
+    <TextView
+        android:id="@+id/logreg_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新用户，注册"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="@id/logreg_forget"
+        app:layout_constraintRight_toRightOf="@id/logreg_phone" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="#fff"
+        app:layout_constraintLeft_toLeftOf="@id/logreg_register"
+        app:layout_constraintRight_toRightOf="@id/logreg_register"
+        app:layout_constraintTop_toBottomOf="@id/logreg_register" />
+
+</android.support.constraint.ConstraintLayout>

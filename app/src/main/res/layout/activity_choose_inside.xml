@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".activity.ChooseInsideActivity">
+
+    <ImageView
+        android:id="@+id/choose_inside_img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_left_arrow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/choose_inside_constraint_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_gray_10"
+        android:paddingStart="16dp"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintLeft_toRightOf="@id/choose_inside_img_back"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/choose_inside_img_start"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_start"
+            android:tint="#1fc756"
+            app:layout_constraintBottom_toTopOf="@id/choose_inside_img_end"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/choose_inside_text_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="dsfsdks"
+            app:layout_constraintBottom_toBottomOf="@id/choose_inside_img_start"
+            app:layout_constraintLeft_toRightOf="@id/choose_inside_img_start"
+            app:layout_constraintTop_toTopOf="@id/choose_inside_img_start" />
+
+        <ImageView
+            android:id="@+id/choose_inside_img_end"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_end"
+            android:tint="#ff0000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/choose_inside_img_start"
+            app:layout_constraintTop_toBottomOf="@id/choose_inside_img_start" />
+
+        <TextView
+            android:id="@+id/choose_inside_text_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="dfsjdkfjsl"
+            app:layout_constraintBottom_toBottomOf="@id/choose_inside_img_end"
+            app:layout_constraintLeft_toRightOf="@id/choose_inside_img_end"
+            app:layout_constraintTop_toTopOf="@id/choose_inside_img_end" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="#0f000000"
+            app:layout_constraintBottom_toTopOf="@id/choose_inside_img_end"
+            app:layout_constraintLeft_toLeftOf="@id/choose_inside_img_start"
+            app:layout_constraintRight_toRightOf="@id/choose_inside_img_start"
+            app:layout_constraintTop_toBottomOf="@id/choose_inside_img_start" />
+
+        <ImageView
+            android:id="@+id/choose_inside_img_bee"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_bee"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.6"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#0f000000"
+            app:layout_constraintBottom_toTopOf="@id/choose_inside_img_end"
+            app:layout_constraintLeft_toLeftOf="@id/choose_inside_text_end"
+            app:layout_constraintRight_toLeftOf="@+id/choose_inside_img_bee"
+            app:layout_constraintTop_toBottomOf="@id/choose_inside_img_start" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/choose_inside_text_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="请选择您满意的出行方案"
+        app:layout_constraintTop_toBottomOf="@id/choose_inside_constraint_1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="#f7f7f7"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choose_inside_text_hint">
+
+        <LinearLayout
+            android:id="@+id/item_choose_inside_linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="none" />
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

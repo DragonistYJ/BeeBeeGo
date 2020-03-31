@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/intercity_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/bg_orange_20"
+        android:gravity="center_horizontal"
+        android:padding="4dp"
+        android:text="成都双流国际机场-北京首都国际机场"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/intercity_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:tint="#Ed6a00"
+        app:layout_constraintLeft_toLeftOf="@id/intercity_title"
+        app:layout_constraintTop_toBottomOf="@id/intercity_title"
+        app:srcCompat="@drawable/ic_airplane" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#Ed6a00"
+        app:layout_constraintBottom_toBottomOf="@id/intercity_to"
+        app:layout_constraintLeft_toLeftOf="@id/intercity_icon"
+        app:layout_constraintRight_toRightOf="@id/intercity_icon"
+        app:layout_constraintTop_toBottomOf="@id/intercity_icon" />
+
+    <TextView
+        android:id="@+id/intercity_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="ZH4193"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/intercity_icon"
+        app:layout_constraintTop_toTopOf="@id/intercity_icon" />
+
+    <TextView
+        android:id="@+id/intercity_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="07:05 成都双流国际机场登机"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="@id/intercity_no"
+        app:layout_constraintTop_toBottomOf="@id/intercity_no" />
+
+    <TextView
+        android:id="@+id/intercity_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="09:45 北京首都国际机场下机"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="@id/intercity_no"
+        app:layout_constraintTop_toBottomOf="@id/intercity_from" />
+
+    <TextView
+        android:id="@+id/intercity_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2时40分"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="@id/intercity_title"
+        app:layout_constraintTop_toTopOf="@id/intercity_no" />
+
+    <TextView
+        android:id="@+id/intercity_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥1000起"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="@id/intercity_title"
+        app:layout_constraintTop_toTopOf="@id/intercity_from" />
+
+    <Button
+        android:id="@+id/intercity_btn_change"
+        android:layout_width="72dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_orange_20"
+        android:text="换一条"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="@id/intercity_title"
+        app:layout_constraintTop_toBottomOf="@id/intercity_to"
+        app:layout_constraintTop_toTopOf="@id/intercity_to" />
+</android.support.constraint.ConstraintLayout>

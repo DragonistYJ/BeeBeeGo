@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ChooseInterActivity">
+
+    <ImageView
+        android:id="@+id/choose_inter_img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_left_arrow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/choose_inter_constraint_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/bg_gray_10_ii"
+        android:paddingStart="16dp"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintLeft_toRightOf="@id/choose_inter_img_back"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/choose_inter_img_start"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_start"
+            android:tint="#1fc756"
+            app:layout_constraintBottom_toTopOf="@id/choose_inter_img_end"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/choose_inter_text_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/choose_inter_img_start"
+            app:layout_constraintLeft_toRightOf="@id/choose_inter_img_start"
+            app:layout_constraintTop_toTopOf="@id/choose_inter_img_start" />
+
+        <ImageView
+            android:id="@+id/choose_inter_img_end"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_end"
+            android:tint="#ff0000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/choose_inter_img_start"
+            app:layout_constraintTop_toBottomOf="@id/choose_inter_img_start" />
+
+        <TextView
+            android:id="@+id/choose_inter_text_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/choose_inter_img_end"
+            app:layout_constraintLeft_toRightOf="@id/choose_inter_img_end"
+            app:layout_constraintTop_toTopOf="@id/choose_inter_img_end" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="#0f000000"
+            app:layout_constraintBottom_toTopOf="@id/choose_inter_img_end"
+            app:layout_constraintLeft_toLeftOf="@id/choose_inter_img_start"
+            app:layout_constraintRight_toRightOf="@id/choose_inter_img_start"
+            app:layout_constraintTop_toBottomOf="@id/choose_inter_img_start" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#0f000000"
+            app:layout_constraintBottom_toTopOf="@id/choose_inter_img_end"
+            app:layout_constraintLeft_toLeftOf="@id/choose_inter_text_end"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/choose_inter_img_start" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/choose_inter_linear_2"
+        app:layout_constraintTop_toBottomOf="@id/choose_inter_constraint_1">
+
+        <ListView
+            android:id="@+id/choose_inter_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:divider="#fff"
+            android:dividerHeight="8dp"
+            android:scrollbars="none" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/choose_inter_linear_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1">
+
+        <TextView
+            android:id="@+id/choose_inter_text_departTime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#444854"
+            android:gravity="center"
+            android:text="出发时间"
+            android:textColor="#1FC756" />
+
+        <TextView
+            android:id="@+id/choose_inter_text_money"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#444854"
+            android:gravity="center"
+            android:text="价格优先"
+            android:textColor="#FFF" />
+
+        <TextView
+            android:id="@+id/choose_inter_text_time_cost"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#444854"
+            android:gravity="center"
+            android:text="旅行耗时"
+            android:textColor="#FFF" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

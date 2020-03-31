@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_rec"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/item_choose_inside_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="1小时35分"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/item_choose_inside_img"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_distance"
+            app:layout_constraintLeft_toLeftOf="@id/item_choose_inside_time"
+            app:layout_constraintRight_toLeftOf="@id/item_choose_inside_distance"
+            app:layout_constraintTop_toBottomOf="@id/item_choose_inside_time" />
+
+        <TextView
+            android:id="@+id/item_choose_inside_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8.5千米"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/item_choose_inside_img"
+            app:layout_constraintLeft_toRightOf="@id/item_choose_inside_img"
+            app:layout_constraintRight_toRightOf="@id/item_choose_inside_time"
+            app:layout_constraintTop_toTopOf="@id/item_choose_inside_img" />
+
+        <View
+            android:id="@+id/item_choose_inside_view_1"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="8dp"
+            android:background="#0f000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/item_choose_inside_time"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/item_choose_inside_linear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@id/item_choose_inside_view_1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_choose_inside_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="18站·7元·四川大学上车"
+            android:textColor="#888"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/item_choose_inside_view_1"
+            app:layout_constraintTop_toBottomOf="@id/item_choose_inside_linear" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:background="#f7f7f7"
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
+</LinearLayout>
